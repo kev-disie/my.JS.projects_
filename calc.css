@@ -1,0 +1,14 @@
+body {
+  background-color: aliceblue;
+  font-weight: bold;
+  align-items: center;
+}
+.m1,
+.m2,
+.m3,
+.m4 {
+  align-items: center;
+}
+.d1 {
+  align-items: center;
+}
