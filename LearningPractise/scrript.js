@@ -3,15 +3,28 @@ let secondCard = 14;
 let sum = firstCard + secondCard;
 console.log(sum);
 let hasBlackjack = false;
-
-if (sum < 21) {
-  console.log("Do you want to draw a new card?🥲");
+let messeage="";
+function startGame(){
+  if (sum < 21) {
+  messeage="Do you want to draw a new card?🥲";
 } else if (sum == 21) {
-  console.log("Wohooo!You've got Black Jack!🥳 ");
+  messeage="Wohooo!You've got Black Jack!🥳 ";
   hasBlackjack = true;
 } else {
-  console.log("You're out of the game!🤯");
+  messeage="You're out of the game!🤯"  
+  
 }
+let messeageEl=document.getElementById("messeage-el")
+ messeageEl.textContent=messeage
+
+// console.log(messeage)
+
+}
+
+// document.getElementById("messeage-el").textContent=messeage
+
+ 
+
 
 let age = 19;
 if (age >= 21) {
@@ -31,3 +44,11 @@ if (num < 100) {
 } else {
   console.log("Not eligible,You've lready goten your card!!");
 }
+// console.log(4===3)//false
+// console.log(12>12)//false
+// console.log(3<6)//true
+// console.log(3>=3)//false
+// console.log(11<=11)//false
+// console.log(3<=2)//false
+
+
