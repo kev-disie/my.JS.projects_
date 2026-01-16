@@ -1,24 +1,48 @@
-let firstCard = 7;
-let secondCard = 14;
-let sum = firstCard + secondCard;
+      let firstCard = 6;
+let secondCard = 6;
+let sum = firstCard + secondCard 
 console.log(sum);
+sumEL=document.getElementById("sum-el")
+
 let hasBlackjack = false;
 let messeage="";
-function startGame(){
+
+
+let cardsEL=document.getElementById("cards-el")
+function renderGame(){
   if (sum < 21) {
-  messeage="Do you want to draw a new card?🥲";
+  messeage="Do you want to draw a new card?";
 } else if (sum == 21) {
-  messeage="Wohooo!You've got Black Jack!🥳 ";
+  messeage="You've got Black Jack!";
   hasBlackjack = true;
-} else {
-  messeage="You're out of the game!🤯"  
+} else { 
+  messeage="You're out of the game!"  
   
 }
+// let cardsEL=document.getElementById("cards-el")
+cardsEL.textContent="Cards:"+''+firstCard+','+secondCard
 let messeageEl=document.getElementById("messeage-el")
+sumEL.textContent="sum: "+''+sum
  messeageEl.textContent=messeage
 
-// console.log(messeage)
+console.log(messeage)
 
+}
+
+function startGame(){
+  renderGame()
+}
+
+
+let newCardi=9
+function newCard(){
+
+  sum+=newCardi
+  renderGame()
+  // sum = firstCard + secondCard + newCardi; 
+  // sumEL.textContent="sum: "+''+sum
+  // console.log("Drawing new card from the deck!!!")
+  cardsEL.textContent="Cards:"+''+firstCard+','+secondCard+','+newCardi
 }
 
 // document.getElementById("messeage-el").textContent=messeage
@@ -49,6 +73,4 @@ if (num < 100) {
 // console.log(3<6)//true
 // console.log(3>=3)//false
 // console.log(11<=11)//false
-// console.log(3<=2)//false
-
-
+// console.log(3<=2)//falsef

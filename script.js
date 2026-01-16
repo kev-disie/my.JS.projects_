@@ -129,3 +129,16 @@ console.log(6 + "5");
 console.log("My points :" + 5 + 9);
 console.log(2 + 2);
 console.log("11" + "14");
+
+//Arrays-this are ordered lists of items
+
+let featurePost=["2 years sales agent","8 months debt collection agent ",
+  "Bachelors Degree Holder","C.E.O"]
+console.log(featurePost[0],[1],[2])
+
+let expirience=["frontendDeveloper","pepolecounterforNostat","ceoatScrimba"]
+console.log(expirience[0])
+console.log(expirience[1])
+console.log(expirience[2])
+console.log(expirience[0],expirience[1],expirience[2])
+

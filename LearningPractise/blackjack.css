@@ -9,11 +9,24 @@ body{
     background-size: auto;
     color: white;
     font-weight: bold;
+   
 
 
 }
 .h1{
-color: goldenrod;
+color: gold;
+}
+.btn{
+    width: 150px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color:rgb(117, 2, 2);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+   
+    
 }
 .btn1{
     width: 150px;
@@ -24,4 +37,6 @@ color: goldenrod;
     font-weight: bold;
     border: none;
     border-radius: 2px;
+    margin-top:4px ;
+   
 }
