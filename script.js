@@ -141,4 +141,56 @@ console.log(expirience[0])
 console.log(expirience[1])
 console.log(expirience[2])
 console.log(expirience[0],expirience[1],expirience[2])
+ 
+//create an array that describes yourself
+ 
+let describe=["I am a Security Enginieer at SecureTech.co.ke aged",age=24,"years old."]
+console.log(describe[0],describe[1],describe[2])
+console
 
+//push the newMesseages to the messeages array and log it out
+
+let messeage=["Hey,how's it going on your end?","I'm great,thank you?",
+  "All good,been working on my portfolio lately","greate to hear that!!","😂","why are you so Happy"]
+  let newMesseages="same here!!"
+  messeage.push(newMesseages)
+
+  // console.log(messeage[0])
+  // console.log(messeage[1])
+  // console.log(messeage[2])
+  // console.log(messeage[3])
+  console.log(messeage)
+  //messeage.pop()//the .pop() method is used to remove the last item in an array
+   console.log(messeage)
+
+   //Loops:for loop with Arrays 
+
+   for (let count=10;count>=20;count+=1){
+    console.log(count)
+   }
+
+   //create a for loop that counts from 10-100 in stepes of 10
+
+  //  for (let counti=10;counti<=100;counti+=10){
+  //   console.log(counti)
+  //  }
+
+
+   for(let i=0;i<messeage.length;i+=1){ 
+    console.log(messeage[i])
+   }
+
+   let kads=[7,3,9]
+   for(i=0;i<kads.length;i+=1){
+    console.log(kads[i])
+   } 
+
+   let sentence=["Hello","my","name","is","per"]
+   let greetingEl=document.getElementById("greeting-el")
+
+   for(let i=0;i<sentence.length;i++){
+    greetingEl.textContent+=sentence[i]+" "//the +" " adds a space to each item 
+    //in the array
+      
+    // console.log(greetingEl.textConten=sentence[i])
+   } 
