@@ -194,3 +194,31 @@ let messeage=["Hey,how's it going on your end?","I'm great,thank you?",
       
     // console.log(greetingEl.textConten=sentence[i])
    } 
+
+   //return values in functions
+   let player1Time=102
+   let player2Time=107
+
+   function getFastestRaceTime(){
+   if (player1Time < player2Time){
+    return player1Time
+   }
+   
+   else if (player2Time<player1Time){
+    return player2Time
+
+   }
+   else{
+    return player1Time
+   }
+   }
+
+  let fastwtsRaceTime=getFastestRaceTime()
+  console.log(fastwtsRaceTime)
+
+  function totalRaceTime(){
+    sum=player1Time+player2Time
+    return sum
+  }
+ let getSum=totalRaceTime()
+ console.log(getSum)

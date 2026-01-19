@@ -1,5 +1,5 @@
 //using Arrays to initialize the cards
-let cards=[6,6]
+let cards=[getRandomCard(),getRandomCard()]
 
 // let firstCard = 6;
 // let secondCard = 6;
@@ -51,11 +51,11 @@ function startGame(){
 
  //DRY==DO NOT REPEAT YOURSELFR===CODE
 
-let newCardi=9
+let newCardi=getRandomCard()
 cards.push(newCardi)
 
 
-function newCard(){
+function newCard(){ 
 
   sum+=cards[2]
   renderGame()
@@ -65,9 +65,34 @@ function newCard(){
   // cardsEL.textContent="Cards:"+''+cards[0]+','+cards[1]+','+cards[2]
   //  for(i=0;i<cards.length;i++){
   //   cardsEL.textContent+= cards[i]+","
-  // }
- 
+  // }ssssss
+ s
 }
+
+//Mtah.random() method
+function getRandomCard(){
+  return 5;
+}
+let randomNumber=Math.random()
+console.log(randomNumber)
+
+//multiplying Math.random()*6 gives us a range from 0.000----->5.999
+
+//Math.floor()
+let flooredNumber=Math.floor(8.0462)
+console.log(flooredNumber)
+//Mtah.floor()rounds off teh number to the nearest whole number regardless of the 
+//adjacent number being greter than or less than 5
+
+//figure all the possible number that the methods below will ouptut
+// let randNan=Math.floor(Math.random()*7)
+// console.log(randNan)
+
+function rollDice(){
+  return Math.floor((Math.random()*6)+1) 
+}
+let rolled=rollDice()
+console.log(rolled)
 
 // document.getElementById("messeage-el").textContent=messeage
 
