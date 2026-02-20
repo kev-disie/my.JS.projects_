@@ -1,24 +1,22 @@
 //using Arrays to initialize the cards
-let cards=[getRandomCard(),getRandomCard()]
 
-// let firstCard = 6;
-// let secondCard = 6;
-let sum = cards[0] + cards[1] //defining the sum of the first card in array
-console.log(sum);             //validating the output of the sum to the console not necessary but essential
+let cards=[];//we can also use the getRandomCard() function to initialize the cards array instead of hardcoding the values of the first two cards
+let myLength = 
+console.log(cards)
+
+let sum=0;
+
+// isAlive=false;
+// console.log(sum);             //validating the output of the sum to the console not necessary but essential
 let sumEL=document.getElementById("sum-el")//Taking the id sum-el from the DOM  to diplsy the actual sum
 
-//boolean
+//boolean variable to check if the player has blackjack or not
 let hasBlackjack = false;//
 let messeage="";//initilaizing an empty string to be used later on in the function below
 
 //The card display function displays all the cards when invoked
-let cardsEL=document.getElementById("cards-el")//Taking thr cards-el id from the DOM to display the cards actual value
+let cardsEL=document.getElementById("cards-el")//Taking the cards-el id from the DOM to display the cards actual value
 
-function displayCard(){
-  // for(i=0;i<cards.length;i++){
-  //   cardsEL.textContent+= cards[i]+","
-  // }
-}
 
 function renderGame(){
   if (sum < 21) {
@@ -32,10 +30,18 @@ function renderGame(){
   messeage="You're out of the game!"  
   
 }
-// // let cardsEL=document.getElementById("cards-el")
-  for(i=0;i<cards.length;i++){
-    cardsEL.textContent+= cards[i]+","
-  }
+// for( i=0;i < cards.length; i++){
+ // let cardsEL=document.getElementById("cards-el")
+   let  first2=cards.slice(0,1);
+  //  console.log(i)
+    // we use the .join() method to join the elements of the array with a comma and a space in between
+    cardsEL.textContent+="Cards: "+''+first2.join(",");
+    //conditional way of displaying the cards with commas in between
+    // cardsEL.textContent+= cards[i]
+    // if (i<cards.length-1){
+    //   cardsEL.textContent+= ","
+    // }
+} 
 
 let messeageEl=document.getElementById("messeage-el")
 sumEL.textContent="sum: "+''+sum
@@ -43,83 +49,61 @@ sumEL.textContent="sum: "+''+sum
 
 console.log(messeage)
 
-}
+
+
+
+//start game function that invokes the renderGame function to start the game
+
 
 function startGame(){
+
+  // isAlive=true;
+ let  firstCard=getRandomCard();
+ console.log(firstCard)
+
+  let secondCard=getRandomCard();
+  console.log(secondCard)
+
+   cards[firstCard,secondCard];
+  // let sum = cards[0] + cards[1] //defining the sum of the first card in array 
+  sum = firstCard + secondCard//defining the sum of the first card in array 
+
   renderGame()
 }
+
 
  //DRY==DO NOT REPEAT YOURSELFR===CODE
 
-let newCardi=getRandomCard()
-cards.push(newCardi)
-
-
+  
+ let newCardi;
+ 
+//New card function that adds a new card to the cards array and updates the sum and renders the game
 function newCard(){ 
 
-  sum+=cards[2]
+  newCardi=getRandomCard()
+ 
+  sum+=newCardi //we can also use the newCardi variable to add the new card to the sum instead of accessing the last element of the cards array
+
   renderGame()
-  // sum = firstCard + secondCard + newCardi; 
-  // sumEL.textContent="sum: "+''+sum
-  // console.log("Drawing new card from the deck!!!")
-  // cardsEL.textContent="Cards:"+''+cards[0]+','+cards[1]+','+cards[2]
-  //  for(i=0;i<cards.length;i++){
-  //   cardsEL.textContent+= cards[i]+","
-  // }ssssss
- s
+    cardsEL.textContent += ','+newCardi
+  console.log(newCardi)
 }
 
 //Mtah.random() method
+
 function getRandomCard(){
-  return 5;
+let randomNumber=Math.floor(Math.random()*13)+1 //we use the Math.floor() method to round down the random number to the nearest integer and we add 1 to it to get a number between 1 and 13 inclusive 
+if (randomNumber == 1){
+  return 11
+}else if (randomNumber === 11 || randomNumber === 12 || randomNumber === 13){
+  return 10
 }
-let randomNumber=Math.random()
-console.log(randomNumber)
 
-//multiplying Math.random()*6 gives us a range from 0.000----->5.999
 
-//Math.floor()
-let flooredNumber=Math.floor(8.0462)
-console.log(flooredNumber)
-//Mtah.floor()rounds off teh number to the nearest whole number regardless of the 
-//adjacent number being greter than or less than 5
-
-//figure all the possible number that the methods below will ouptut
-// let randNan=Math.floor(Math.random()*7)
-// console.log(randNan)
-
-function rollDice(){
-  return Math.floor((Math.random()*6)+1) 
+  return randomNumber;
 }
-let rolled=rollDice()
-console.log(rolled)
-
-// document.getElementById("messeage-el").textContent=messeage
-
- 
 
 
-// let age = 19;
-// if (age >= 21) {
-//   console.log("Enter the club!!");
-// } else {
-//   console.log("You are a minor,Go Screw yourself !!");
-// }
 
-// let num = 100;
-// if (num < 100) {
-//   console.log("Not eligible dumb-ass");
-// } else if (num === 100) {
-//   //   Tripple equal sign is strict than double equal sign i.e when passing the same value as a string "100
-//   //   the code still works
 
-//   console.log("Here is your Birthday card Old stuff!!");
-// } else {
-//   console.log("Not eligible,You've lready goten your card!!");
-// }
-// console.log(4===3)//false
-// console.log(12>12)//false
-// console.log(3<6)//true
-// console.log(3>=3)//false
-// console.log(11<=11)//false
-// console.log(3<=2)//falsef
+
