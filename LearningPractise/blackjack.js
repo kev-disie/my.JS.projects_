@@ -15,12 +15,12 @@ let messeage = ""; //initilaizing an empty string to be used later on in the fun
 //The card display function displays all the cards when invoked
 let cardsEL = document.getElementById("cards-el"); //Taking the cards-el id from the DOM to display the cards actual value
 
-// let playerEl = document.getElementById("player-el");
-// let player = { name: "Sally", chips: 145 };
-// console.log(player);
+let playerEl = document.getElementById("player-el");
+let player = { name: "Sally", chips: 145 }; //definig an object
+console.log(player);
 
-// playerEl.textContent = `${player.name}: $${player.chips}`;
-// console.log(playerEl.textContentl);
+playerEl.textContent = `${player.name}:  $${player.chips}`; //use backticks for readability rather than + operator to join the two properties
+console.log(playerEl.textContent);
 // debugger;
 function renderGame() {
   if (sum < 21) {
@@ -46,16 +46,13 @@ function renderGame() {
   //using join
   cardsEL.textContent = "Cards: " + cards.join("");
 
-  // if (i < cards.length ) {
-  //     cardsEL.textContent += cards[i] + " ";
-  //   }
     let messeageEl = document.getElementById("messeage-el");
     sumEL.textContent = "sum: " + " " + sum;
     messeageEl.textContent = messeage;
 
     console.log(messeage);
 
-
+      //for loop to join the cards**did not work to my expectation
 
 //   for (let i = 0; i < cards.length ; i++) {
 //     cardsEL.textContent += cards[i] +' ';
