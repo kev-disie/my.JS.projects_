@@ -1,9 +1,9 @@
 body{
     margin: 0px;
     padding: 10px;
-    background-color: navy;
+    background-color: brown;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -31,4 +31,13 @@ body{
     font-weight: bolder;
     color: white;
     padding: 5px ;
+}
+
+.ul{
+    display: grid;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
 }

@@ -14,4 +14,26 @@ let shippingCos = 12  //let
 
 let shippingTime = "5 - 12 days"
 
+// let pEl = document.getElementById("p-el")
 
+let contEl = document.getElementById("conatiner")
+
+contEl.innerHTML = "<button onclick = 'buy()'> Buy !! </button> "
+
+
+// my way of doing stuff huh
+
+// contEl.addEventListener("click",function(){
+   
+
+//  return contEl.innerHTML += "<p>Thank you for shoping with Us</p>"
+// }
+    
+// )
+
+
+//Another alternative      USE THE FUNCTION RATHER THSN 
+
+function buy(){
+ document.getElementById("p-el").innerHTML = "<p>Thank you for shoping with Us.</p>"
+}
