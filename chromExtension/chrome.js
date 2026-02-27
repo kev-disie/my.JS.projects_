@@ -1,4 +1,5 @@
-let myLeads = ["Kassandra","Naomi","Marione","cutepoison","Nasseh"];
+let myLeads = [];
+
 
 const inputEl = document.getElementById("input-el")
 
@@ -10,27 +11,48 @@ const ulEL = document.getElementById("ul-el") //defined and get the u-el id from
 
 // let lead = inputEl.value
 
+  let lent = myLeads.length
+
+      console.log(lent)
+
 
 
 inputBtn.addEventListener("click",function(){
     // myLeads.push(lead)
-    // console.log(myLeads)
     myLeads.push(inputEl.value)
+     console.log(lent)
     console.log(myLeads)
-
-
+    
+      renderLeads()
 
     
 
+    // console.log(renderLeads())
+
     console.log("Button clicked from addEventlistener...")
 })
+
+function renderLeads(){
+    
 // write a for loop that logs out the items in the myLeads array
 
-for (let i = 0; i < myLeads.length ;i++){
+  let listItems = ""
+
+   const li = document.createElement("li")  //define a variable then use creatElement method 
+for (let i = 0; i < myLeads.length ;i ++){
     // console.log(myLeads[i])
 
-    ulEL.innerHTML += "<li>" + myLeads[i] + "</li>"
+    // listItems += "<li>" +  myLeads[i] + "</li>"
+                                                           //NEVER DEFINE AYTHING INSIDE A FOR LOOP!!
+    // ulEL.innerHTML = listItems
+
+     li.textContent =  myLeads[i] + " 😮‍💨" //we know the usage of textcontent here
+
+    ulEL.append(li) //appEND adds the items to the list
+
+    
 
 }
 
 
+}
