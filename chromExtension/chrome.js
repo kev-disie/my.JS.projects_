@@ -42,17 +42,36 @@ function renderLeads(){
 for (let i = 0; i < myLeads.length ;i ++){
     // console.log(myLeads[i])
 
-    // listItems += "<li>" +  myLeads[i] + "</li>"
-                                                           //NEVER DEFINE AYTHING INSIDE A FOR LOOP!!
-    // ulEL.innerHTML = listItems
+    // listItems += "<li><a target = '_blank' href = '"+ myLeads[i]+"'>" +  myLeads[i] + "</a></li>"
+                                                          // NEVER DEFINE AYTHING INSIDE A FOR LOOP!!
 
-     li.textContent =  myLeads[i] + " 😮‍💨" //we know the usage of textcontent here
+       //Working with Template Strings
 
-    ulEL.append(li) //appEND adds the items to the list
+       listItems += ` <li class = 'li'>
+       
+       <a  class = 'a'target = _blank href = ${myLeads[i]} >
+
+       ${myLeads[i] + " 😮‍💨"}
+       
+       
+       
+       
+       </li>`
+       
+            
+            
+
+       
+    ulEL.innerHTML = listItems
+
+    //  li.textContent =  myLeads[i] + " 😮‍💨" //we know the usage of textcontent here
+
+    // ulEL.append(li) //appEND adds the items to the list
 
     
 
 }
+inputEl.value = "";
 
 
 }

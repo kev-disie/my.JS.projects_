@@ -37,4 +37,16 @@ contEl.innerHTML = "<button onclick = 'buy()'> Buy !! </button> "
 function buy(){
  document.getElementById("p-el").innerHTML = "<p>Thank you for shoping with Us.</p>"
 }
+
+
+ //working with Template strings
+
+ const recipient = "James"
+
+ let yourName = "Kassandra"
+
+ const email = `Hey ${recipient}!
  
+How is the going cheers ${yourName}`
+
+ console.log(email)
